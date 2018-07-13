@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-import { iconTransition, checkTransition } from './transitions'
+import { iconTransition, checkspanTransition } from './transitions'
 import Icon from './Icon'
-import Check from './Check'
+import CheckSpan from './CheckSpan'
 
 const Input = styled.input`
   display: none;
-  &:checked + ${Check} {
-    animation: ${checkTransition} .3s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards;
+  &:checked + ${CheckSpan} {
+    animation: ${checkspanTransition} .3s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards;
     ${Icon} {
       opacity: 1;
       color: white;
