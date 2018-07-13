@@ -9,19 +9,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
-    "transpile": "babel src -d dist --copy-files",
+    "transpile": "babel lib -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
     "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy",
-    "lint": "eslint './src/**/*.js*' && eslint './examples/src/*.js*'",
-    "lint:css": "stylelint './src/**/*.jsx' && stylelint './examples/src/**/*.jsx'"
+    "lint": "eslint './lib/**/*.js*' && eslint './examples/lib/*.js*'",
+    "lint:css": "stylelint './lib/**/*.jsx' && stylelint './examples/src/**/*.jsx'"
   },
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "styled-components": "^3.3.3",
+    "styled-icons": "^2.3.1",
     "styled-tools": "^0.6.0"
   },
   "devDependencies": {
@@ -38,7 +39,6 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-jsx-a11y": "^6.1.0",
     "eslint-plugin-react": "^7.10.0",
-    "file-loader": "^1.1.11",
     "gh-pages": "^1.2.0",
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.16.0",

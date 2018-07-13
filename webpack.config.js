@@ -18,10 +18,6 @@ module.exports = {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|json|xml|ico)$/,
-        loader: 'file-loader'
       }
     ]
   },
