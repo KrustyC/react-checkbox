@@ -17,8 +17,8 @@ const StyledCheck = styled(Check)`
 `
 
 const Icon = styled.div`
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
   ${({ config: { colors } }) => css`
     color: ${ifProp({ checked: true }, colors.icon, 'transparent')};
   `}
@@ -27,15 +27,12 @@ height: 100%;
   ${switchProp('size', {
     small: css`
       width: ${prop('config.size.icon.small')};
-      height: ${prop('config.size.icon.small')};
   `,
     medium: css`
       width: ${prop('config.size.icon.medium')};
-      height: ${prop('config.size.icon.medium')};
   `,
     large: css`
       width: ${prop('config.size.icon.large')};
-      height: ${prop('config.size.icon.large')};
   `
   })}
 `
