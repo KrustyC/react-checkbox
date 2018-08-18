@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Column, Row } from './Grid'
+import { Column, Row } from './components'
 
 import Checkbox from '../../lib'
 
