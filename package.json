@@ -1,6 +1,6 @@
 {
   "name": "@krustyc/react-checkbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React checkbox created with styled-components",
   "main": "dist/index.js",
   "repository": "git@github.com:KrustyC/react-checkbox.git",
