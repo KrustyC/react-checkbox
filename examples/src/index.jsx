@@ -4,27 +4,28 @@ import { render } from 'react-dom'
 import styled from 'styled-components'
 
 import Default from './Default'
+import Labelled from './Labelled'
 
 const Container = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  ${'' /* align-items: center; */}
 `
 
 const Subcontainer = styled.div`
   display: flex;
-  justify-content: center;
-  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
 `
 
 const Section = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
-  padding: 10px 50px 10px 50px;
 `
 
 const Title = styled.h1`
@@ -55,7 +56,7 @@ const App = () => (
         <Subtitle>
           Default checkbox with labels
         </Subtitle>
-        <Default />
+        <Labelled />
       </Section>
       <Section>
         <Subtitle>

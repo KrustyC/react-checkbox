@@ -6,7 +6,7 @@ const CheckSpan = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: ${ifProp('squared', '10%', '50%')};
   cursor: pointer;
   border-style: solid;
   transition: border .3s ease;
