@@ -1,5 +1,5 @@
 {
-  "name": "sc-react-checkbox",
+  "name": "@krustyc/react-checkbox",
   "version": "1.0.0",
   "description": "React checkbox created with styled-components",
   "main": "dist/index.js",
@@ -9,9 +9,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
     "transpile": "babel lib -d dist --copy-files",
     "prepublishOnly": "npm run transpile",
-    "build": "webpack --mode production",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy",
     "lint": "eslint './lib/**/*.js*' && eslint './examples/lib/*.js*'",
