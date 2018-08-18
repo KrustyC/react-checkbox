@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { prop, switchProp } from 'styled-tools'
 
 const Container = styled.label`
+  padding: 10px;
   ${switchProp('size', {
     small: css`
       min-width: ${prop('config.size.container.small')};

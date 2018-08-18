@@ -8,7 +8,7 @@ export default class Default extends Component {
   state = {
     checkbox1: true,
     checkbox2: false,
-    checkbox3: false
+    checkbox3: true
   }
 
   onToggle = ({ target: { id } }) => this.setState(prevState => ({ [id]: !prevState[id] }))
@@ -22,6 +22,7 @@ export default class Default extends Component {
           id="checkbox1"
           onChange={this.onToggle}
           checked={checkbox1}
+          size="small"
         />
         <Checkbox
           id="checkbox2"
@@ -32,6 +33,7 @@ export default class Default extends Component {
           id="checkbox3"
           onChange={this.onToggle}
           checked={checkbox3}
+          size="large"
         />
       </Row>
     )

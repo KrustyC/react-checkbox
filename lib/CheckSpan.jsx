@@ -1,16 +1,26 @@
 import styled, { css } from 'styled-components'
-import { prop, switchProp } from 'styled-tools'
+import { prop, switchProp, ifProp } from 'styled-tools'
+import { checkspanTransition } from './transitions'
 
 const CheckSpan = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: ${prop('config.colors.primary')};
-  border-color: ${prop('config.colors.accent')};
   cursor: pointer;
   border-style: solid;
   transition: border .3s ease;
+
+  ${({ config: { colors } }) => css`
+    background: ${ifProp({ checked: true }, colors.checked, colors.unchecked)};
+    border-color: ${ifProp({ checked: true }, colors.checkedBorder, colors.uncheckedBorder)};
+  `}
+
+  ${({ checked }) => checked && css`
+    animation: ${checkspanTransition} .3s cubic-bezier(0.895, 0.030, 0.685, 0.220) forwards;
+    background: ${prop('config.colors.checked')};
+    border-color: ${prop('config.colors.borderChecked')};
+  `}
 
   ${switchProp('size', {
     small: css`

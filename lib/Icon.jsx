@@ -1,9 +1,24 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
-import { prop, switchProp } from 'styled-tools'
+import { ifProp, prop, switchProp } from 'styled-tools'
 import { Check } from 'styled-icons/fa-solid'
+import { iconTransition } from './transitions'
 
-const Icon = styled(Check)`
-  color: #FFF;
+const StyledCheck = styled(Check)`
+  color: white;
+  ${({ checked }) => checked && css`
+      opacity: 1;
+      transform: scale(0);
+      animation: ${iconTransition} .4s cubic-bezier(1.000, 0.008, 0.565, 1.650) .1s 1 forwards;
+  `}
+`
+
+const Icon = styled.div`
+  ${({ config: { colors } }) => css`
+    color: ${ifProp({ checked: true }, colors.icon, 'transparent')};
+  `}
+
   
   ${switchProp('size', {
     small: css`
@@ -21,4 +36,14 @@ const Icon = styled(Check)`
   })}
 `
 
-export default Icon
+const StyledIcon = ({ checked, ...rest }) => (
+  <Icon checked={checked} {...rest}>
+    <StyledCheck checked={checked} />
+  </Icon>
+)
+
+StyledIcon.propTypes = {
+  checked: PropTypes.bool.isRequired
+}
+
+export default StyledIcon
