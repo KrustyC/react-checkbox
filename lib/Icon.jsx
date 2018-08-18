@@ -17,6 +17,8 @@ const StyledCheck = styled(Check)`
 `
 
 const Icon = styled.div`
+width: 100%;
+height: 100%;
   ${({ config: { colors } }) => css`
     color: ${ifProp({ checked: true }, colors.icon, 'transparent')};
   `}
