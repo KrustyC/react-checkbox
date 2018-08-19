@@ -1,6 +1,6 @@
 {
   "name": "@krustyc/react-checkbox",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "React animated checkbox built with styled-components",
   "main": "dist/index.js",
   "repository": "git@github.com:KrustyC/react-checkbox.git",
