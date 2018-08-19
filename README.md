@@ -47,13 +47,17 @@ Please always check linting (`yarn lint`) and test (`yarn test`) before pushing.
 Submit a PR from a branch named `fix/meaningful-name` or `feature/meaningful-name`. Not from master.
 Please provide meaningful commit messages. If needed, squash commits before opening your PR.
 
+## Todos
+- [ ] Customisable style configruation (colors, sizes, etc...)
+- [ ] Add CircleCI
+- [ ] Add Tests
+
+## Credits
+- Davide Crestini
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
 
 Copyright (©) 2018-present, Davide Crestini
 
-## Todos
-- [ ] Customisable style configruation (colors, sizes, etc...)
-- [ ] Add CircleCI
-- [ ] Add Tests
