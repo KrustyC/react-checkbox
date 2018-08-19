@@ -56,3 +56,4 @@ Copyright (©) 2018-present, Davide Crestini
 ## Todos
 - [ ] Customisable style configruation (colors, sizes, etc...)
 - [ ] Add CircleCI
+- [ ] Add Tests
