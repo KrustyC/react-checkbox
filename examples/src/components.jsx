@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import SyntaxHighlighter, { registerLanguage } from 'react-syntax-highlighter/prism-light'
 import jsx from 'react-syntax-highlighter/languages/prism/jsx'
@@ -6,7 +7,6 @@ import { prism } from 'react-syntax-highlighter/styles/prism'
 
 registerLanguage('jsx', jsx)
 
- 
 // registerLanguage('jsx', jsx);
 
 const HighlighterContainer = styled.div`
@@ -30,6 +30,10 @@ export const Highlights = ({ children }) => (
     </CodeHighlighter>
   </HighlighterContainer>
 )
+
+Highlights.propTypes = {
+  children: PropTypes.string.isRequired
+}
 
 export const Row = styled.div`
   display: flex;

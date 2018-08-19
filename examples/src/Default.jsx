@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react'
-import { Heading, P, Row, Column } from './components'
+import {
+  Heading, P, Row, Column
+} from './components'
 
 import Checkbox from '../../lib'
 
@@ -17,14 +19,16 @@ export default class Default extends Component {
   onToggle = ({ target: { id } }) => this.setState(prevState => ({ [id]: !prevState[id] }))
 
   render() {
-    const { checkbox1, checkbox2, checkbox3, checkbox4, checkbox5, checkbox6 } = this.state
+    const {
+      checkbox1, checkbox2, checkbox3, checkbox4, checkbox5, checkbox6
+    } = this.state
 
     return (
       <Column>
         <P>
-          The default The default The default The default The default The default The default The default
-          The default The default The default The default The default The default The default The default
-          The default The default The default The default The default The default The default The default
+          The default The default The default The default The default The default The
+          Thedefault The default The default The default The default The default The
+          Th default The default The default The default The default The default The default
         </P>
         <Heading>Rounded</Heading>
         <Row>

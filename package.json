@@ -14,7 +14,7 @@
     "prepublishOnly": "npm run transpile",
     "deploy": "gh-pages -d examples/dist",
     "publish-demo": "npm run build && npm run deploy",
-    "lint": "eslint './lib/**/*.js*' && eslint './examples/lib/*.js*'",
+    "lint": "eslint './lib/**/*.js*' && eslint './examples/src/*.js*'",
     "lint:css": "stylelint './lib/**/*.jsx' && stylelint './examples/src/**/*.jsx'"
   },
   "dependencies": {

@@ -23,6 +23,7 @@ module.exports = {
       'specialLink': ['to']
     }],
     'jsx-a11y/label-has-for': 0,
+    'jsx-a11y/label-has-associated-control': 0,
     'react/no-unescaped-entities': 0,
     'import/no-extraneous-dependencies': ['error', {
       devDependencies: ['**/*/__tests__/**/*', '**/*/__mocks__/**/*', '**/webpack.*.js']

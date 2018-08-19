@@ -1,10 +1,13 @@
 
+// eslint-disable-next-line
 import 'typeface-roboto'
 import React from 'react'
 import { render } from 'react-dom'
 import { injectGlobal } from 'styled-components'
 
-import { Container, Subcontainer, Section, Title, Subtitle, Spacer, P } from './components'
+import {
+  Container, Section, Subtitle, Spacer
+} from './components'
 import Intro from './Intro'
 import Default from './Default'
 import Labelled from './Labelled'
